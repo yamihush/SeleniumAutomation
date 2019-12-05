@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Suite1" verbose="1" >
+    <test name="regression" >
+        <classes>
+            <class name="com.selenium.framework.SearchProductsTest" />
+        </classes>
+    </test>
+    <listeners>
+        <listener class-name="com.selenium.framework.listeners"/>
+        <listener class-name="resources.ExtentReporterNG"/>
+
+    </listeners>
+</suite>
