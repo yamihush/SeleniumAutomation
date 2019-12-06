@@ -1,5 +1,8 @@
 package pageObjects;
 
+import com.selenium.framework.Base;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,6 +13,7 @@ import java.io.IOException;
 public class HomePage {
 
     public WebDriver driver;
+    public static Logger log =LogManager.getLogger(Base.class.getName());
 
     public HomePage(WebDriver driver) throws IOException {
 
@@ -51,4 +55,9 @@ public class HomePage {
         this.searchButton = searchButton;
     }
 
+    public void search(String item){
+        getSearchBox().sendKeys(item);
+        getSearchButton().click();
+        log.debug("Clicked the search button Link ");
+    }
 }

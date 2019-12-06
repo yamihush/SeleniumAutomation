@@ -27,9 +27,9 @@ public class Base {
     public WebDriver intializeDriver() throws IOException {
 
         prop = new Properties();
+        File fis = new File("./src/main/Resources/data.properties");
 
-
-        FileInputStream file = new FileInputStream("C:\\Users\\Muthukumar\\Selenium Prepration\\AutomationFramework\\src\\main\\Resources\\data.properties");
+        FileInputStream file = new FileInputStream(fis);
 
         prop.load(file);
 
@@ -40,6 +40,8 @@ public class Base {
             System.setProperty(prop.getProperty("chromeDriver"),prop.getProperty("chromeDriverPath") );
 
             driver = new ChromeDriver();
+
+            driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS) ;
         }
         else
             if(browserName.equalsIgnoreCase("firefox")){
@@ -67,7 +69,7 @@ public class Base {
 
        File  src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-        FileUtils.copyFile(src,new File("c://test/screen"+timestamp()+".png"));
+        FileUtils.copyFile(src,new File("./test-output/screenshots/screen"+timestamp()+".png"));
     }
 
     public String timestamp() {
