@@ -25,3 +25,11 @@ Testing Scenario:
         cart page/container
 
 
+Table of Contents
+There are a few things we need before running the tests. These are:
+
+Java Installation / Update
+Installing TestNG
+Setting up Maven
+Running the Project
+From Terminal
