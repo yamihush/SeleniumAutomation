@@ -1,39 +1,34 @@
 # AutomationFramework
 
-Testing Scenario:
-
-        Goto - http://amazon.com
-        and search for product "Headphones"
-        and find all the "Best Sellers" listed in the result page
-        and got to each product page found and add it to "cart".
-
-
------>>
-    http://amazon.com
-       URI
-
-    and search for product "Headphones"
-       Search box, search button
-
-    and find all the "Best Sellers" listed in the result page
-       search list page , Best Seller tag
-
-    and got to each product page found
-       product page , right container , center container ,
-
-    and add it to "cart".
-        cart page/container
-
-
 Table of Contents
 There are a few things we need before running the tests. These are:
 
 Java Installation / Update
+--------------------------
+Check your system to see if you have the latest Java version installed.
+
+Command:
+
+$ java -version
+If you do not have the latest Java installed, find out how to install Java here.
+
+Ensure your JAVA_HOME environment to the location of the installed JDK
 
 Installing TestNG
+-----------------
+Download Maven & Install and Set up Maven
 
-Setting up Maven
+Unzip the distribution archive to the directory you wish to install Maven. I extracted maven to my Documents folder
+Add Maven to the PATH. More information can be found in the README.txt in the zip folder.
+
+Verify Maven was correctly installed
+Command:
+$ mvn –version
 
 Running the Project
+-------------------
+Download the project and go to Terminal / cmd 
 
-From Terminal
+From Terminal / cmd -  
+
+Navigate to the location of project then execute "mvn test" to run only test or "mvn clean install"
