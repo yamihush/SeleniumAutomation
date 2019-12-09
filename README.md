@@ -24,6 +24,12 @@ Verify Maven was correctly installed
 Command:
 $ mvn –version
 
+Download Chrome Driver :
+------------------------
+Download respective Chrome dirver and place into below project path folder.
+
+src/main/Resources/driver
+
 Running the Project
 -------------------
 Download the project and go to Terminal / cmd 
